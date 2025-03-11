@@ -1,26 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   A.hpp                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amousaid <amousaid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/11 14:14:23 by amousaid          #+#    #+#             */
-/*   Updated: 2025/03/11 14:25:37 by amousaid         ###   ########.fr       */
+/*   Created: 2025/03/11 15:19:42 by amousaid          #+#    #+#             */
+/*   Updated: 2025/03/11 15:21:55 by amousaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Serializer.hpp"
+#ifndef A_HPP
+#define A_HPP
 
-int main ()
+#include "Base.hpp"
+
+class A : public Base
 {
-	Data men;
+};
 
-	men.age = 45;
-	men.name = "falfoul";
-
-	std::cout << "name: " << men.name << " age: " << men.age << std::endl;
-	std::cout << "address of Data: " << &men << std::endl;
-	std::cout << "address as int: " << Serializer::serialize(&men) << std::endl;
-	std::cout << "address as normal form: " << Serializer::deserialize(Serializer::serialize(&men)) << std::endl;
-}
+#endif

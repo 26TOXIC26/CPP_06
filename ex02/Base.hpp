@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Serializer.hpp                                     :+:      :+:    :+:   */
+/*   Base.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amousaid <amousaid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/10 16:44:24 by amousaid          #+#    #+#             */
-/*   Updated: 2025/03/11 14:24:03 by amousaid         ###   ########.fr       */
+/*   Created: 2025/03/11 15:17:31 by amousaid          #+#    #+#             */
+/*   Updated: 2025/03/11 16:21:55 by amousaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# ifndef SERIALIZER_HPP
-# define SERIALIZER_HPP
+#ifndef BASE_HPP
+#define BASE_HPP
 
 #include <iostream>
 #include <string>
@@ -19,18 +19,12 @@
 #include <limits>
 #include <cmath>
 #include <cstdlib>
-#include <stdint.h>
-#include "Data.hpp"
+#include <exception>
 
-class Serializer
+class Base
 {
 	public:
-		Serializer();
-		Serializer(const Serializer &src);
-		~Serializer();
-		Serializer &operator=(const Serializer &src);
-		static uintptr_t serialize(Data* ptr);
-		static Data* deserialize(uintptr_t raw);
+		virtual ~Base();
 };
 
 #endif
